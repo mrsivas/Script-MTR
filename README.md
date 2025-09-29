@@ -10,9 +10,9 @@ Script to get MTR result with arguments like IP, Packet count
 
 #!/bin/bash: This is the shebang line, specifying that the script should be executed with Bash. 
 
-TARGET_HOST="example.com": This variable stores the hostname or IP address that mtr will target. 
+TARGET_HOST=$1: This variable stores the hostname or IP address that mtr will target and gets value from parameter. 
 
-PACKET_COUNT=10: This variable sets the number of packets mtr will send to each hop. 
+PACKET_COUNT=$2: This variable sets the number of packets mtr will send to each hop and gets value from parameter. 
 
 OUTPUT_FILE="mtr_report_${TARGET_HOST}_$(date +%Y%m%d_%H%M%S).txt": This creates a unique filename for the report, incorporating the target host and a timestamp. 
 
